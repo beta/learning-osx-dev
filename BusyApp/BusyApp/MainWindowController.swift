@@ -10,13 +10,13 @@ import Cocoa
 
 class MainWindowController: NSWindowController {
     
-    @IBOutlet var slider: NSSlider!
-    @IBOutlet var showMarksSlider: NSButton!
-    @IBOutlet var hideMarksSlider: NSButton!
-    @IBOutlet var sliderStateLabel: NSTextField!
-    @IBOutlet var checkBox: NSButton!
-    @IBOutlet var secureTextField: NSSecureTextField!
-    @IBOutlet var textField: NSTextField!
+    @IBOutlet weak var slider: NSSlider!
+    @IBOutlet weak var showMarksSlider: NSButton!
+    @IBOutlet weak var hideMarksSlider: NSButton!
+    @IBOutlet weak var sliderStateLabel: NSTextField!
+    @IBOutlet weak var checkBox: NSButton!
+    @IBOutlet weak var secureTextField: NSSecureTextField!
+    @IBOutlet weak var textField: NSTextField!
     
     var lastSliderValue: Int = 0
     
@@ -30,7 +30,8 @@ class MainWindowController: NSWindowController {
         showMarksSlider.state = NSOnState
         hideMarksSlider.state = NSOffState
         sliderStateLabel.stringValue = ""
-        checkBox.state = NSOffState
+        checkBox.state = NSOnState
+        checkBox.title = "Uncheck me"
         secureTextField.stringValue = ""
         textField.stringValue = ""
     }
